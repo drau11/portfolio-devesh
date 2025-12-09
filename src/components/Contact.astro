@@ -1,10 +1,5 @@
 ---
-import { SITE_CONFIG } from "@config";
-import type { ContactProps } from "@types";
-
-type Props = ContactProps;
-
-const { email } = Astro.props;
+const { email } = Astro.props as { email: string };
 ---
 
 <section id="contact" class="py-24 text-center max-w-xl mx-auto">
