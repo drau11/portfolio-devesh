@@ -1,0 +1,13 @@
+---
+const { email } = Astro.props as { email: string };
+---
+
+<section id="contact" class="py-24 text-center max-w-xl mx-auto">
+  <h3 class="text-5xl font-bold text-neutral-200 mb-4">Get In Touch</h3>
+  <a
+    href={`mailto:${email}`}
+    class="inline-block border-2 border-primary-200 text-primary-200 px-6 py-3 rounded-md hover:bg-primary-200 hover:text-white transition-colors"
+  >
+    Say Hello
+  </a>
+</section>

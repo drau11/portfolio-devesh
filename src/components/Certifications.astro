@@ -1,0 +1,25 @@
+---
+type Props = {
+  certifications: { name: string; link: string; logo: string }[];
+};
+
+const { certifications } = Astro.props;
+---
+
+<section id="certifications" class="py-24">
+  <h2 class="text-3xl font-bold text-neutral-200 mb-8">Certifications</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {
+      certifications.map((cert) => (
+        <a
+          href={cert.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="bg-gray-800 rounded-lg p-6 flex items-center justify-center text-center"
+        >
+          <h3 class="text-xl font-bold text-neutral-200">{cert.name}</h3>
+        </a>
+      ))
+    }
+  </div>
+</section>
